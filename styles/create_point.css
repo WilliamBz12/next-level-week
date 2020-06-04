@@ -1,0 +1,119 @@
+#page-create-point {
+    width: 90%;
+    height: 100%;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#page-create-point header a {
+    display: flex;
+    color: var(--title-color);
+    font-weight: 700;
+}
+
+#page-create-point header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    width: 90%;
+}
+
+#page-create-point header a span {
+    background: url('../assets/icones/arrow-left.svg');
+    display: flex;
+    margin-right: 20px;
+    width: 20px;
+    height: 26px;
+}
+
+form {
+    background-color: white;
+    padding: 64px;
+    margin-top: 60px;
+    border-radius: 8px;
+    max-width: 750px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form h1 {
+    font-size: 36px;
+}
+
+form fieldset {
+    margin-top: 64px;
+    border: 0;
+}
+
+form label {
+    font-size: 12px;
+    color: gray;
+}
+
+form select {
+    margin-top: 10px;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 8px;
+    background-color: #F0EFF5;
+    height: 40px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+}
+
+form input {
+    margin-top: 10px;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 8px;
+    background-color: #F0EFF5;
+    height: 40px;
+    outline: none;
+}
+
+.field-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.field {
+    margin-top: 20px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form button {
+    width: 260px;
+    height: 56px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    border-radius: 8px;
+    transition: background-color 400ms;
+}
+
+form button:hover {
+    background-color: #2fb86e;
+}
+
+form .field-group .field+.field {
+    margin-left: 24px;
+}
