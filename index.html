@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecoleta</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/home/william/Documentos/projects/starter_couser_rocketseat/nlw/styles/main.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/home/william/Documentos/projects/starter_couser_rocketseat/nlw/styles/home.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/home/william/Documentos/projects/starter_couser_rocketseat/nlw/styles/responsive.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/styles/main.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/styles/home.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/styles/modal.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/styles/responsive.css" media="screen" />
 
 </head>
 
@@ -17,8 +18,8 @@
     <div id="page-home">
         <div class="content">
             <header>
-                <img src="/home/william/Documentos/projects/starter_couser_rocketseat/nlw/assets/icones/logo.svg">
-                <a href="google.com">
+                <img src="/assets/icones/logo.svg">
+                <a href="create-point.html">
                     <span></span> Cadastre um ponto de coleta
                 </a>
             </header>
@@ -34,6 +35,26 @@
 
         </div>
     </div>
+
+    <div id="modal" class="hide">
+        <div class="content">
+            <div class="header">
+                <h1>Pontos de coleta</h1>
+                <a href="#">Fechar</a>
+            </div>
+            <form action="">
+                <label for="search">Cidade</label>
+                <div class="search field">
+                    <input type="text" name="city" placeholder="Digite a cidade">
+                    <button>
+                        <img src="/assets/icones/search.svg">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/scripts/index.js"></script>
 
 </body>
 

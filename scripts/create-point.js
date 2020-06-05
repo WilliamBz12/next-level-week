@@ -13,8 +13,13 @@ function populateUFs() {
 
 function getCities(event) {
     const citySelect = document
-        .querySelector("select[name=city");
+        .querySelector("[name=city]");
+    const stateInput = document.querySelector("[name=state]");
+    const index = event.target.selectedIndex;
+    stateInput.value = event.target.options[index].text;
 
+    citySelect.innerHTML = "<option value>Selecione uma cidade</option>";
+    citySelect.disabled = true;
     const id = event.target.value;
     const url = "https://servicodados.ibge.gov.br/api/v1/localidades/estados/" + id + "/municipios";
     fetch(url)
@@ -28,10 +33,45 @@ function getCities(event) {
         });
 }
 
+let selectedItems = [];
+const typeInput = document.querySelector("[name=items]")
+
+
+function handleSelectedItem(event) {
+
+
+
+    const itemLi = event.target;
+    //add or remove 
+    itemLi.classList.toggle("selected");
+    const itemId = itemLi.dataset.id;
+
+    const alreadySelected = selectedItems.findIndex((item) => item == itemId);
+    if (alreadySelected >= 0) {
+        const filteredItems = selectedItems.filter(
+            item => item != itemId
+        );
+        selectedItems = filteredItems;
+    } else {
+        selectedItems.push(itemId);
+    }
+    typeInput.value = selectedItems;
+
+}
+
 
 populateUFs();
 
 
 document
-    .querySelector("select[name=uf")
+    .querySelector("select[name=uf]")
     .addEventListener("change", getCities);
+
+
+//colect itens
+
+const itemsToCollect = document.querySelectorAll(".items-grid li");
+
+for (item of itemsToCollect) {
+    item.addEventListener("click", handleSelectedItem)
+}

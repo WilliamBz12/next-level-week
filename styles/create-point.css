@@ -117,3 +117,42 @@ form button:hover {
 form .field-group .field+.field {
     margin-left: 24px;
 }
+
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.items-grid li {
+    background: #f5f5f5;
+    display: flex;
+    padding: 32px 24px 16px;
+    height: 120px;
+    list-style: none;
+    border: 8px;
+    border: 2px solid #f5f5f5;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: point;
+}
+
+.items-grid li span {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.items-grid li.selected {
+    background: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+.items-grid li img,
+.items-grid li span {
+    pointer-events: none;
+}
